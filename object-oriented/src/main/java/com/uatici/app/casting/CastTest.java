@@ -20,6 +20,7 @@ public class CastTest {
 		//Burada initialize edilen animal oldugu icin bu kod ilerde patlayacak.
 		Animal animal = new Animal();
 		Dog d = (Dog) animal;
+		d.makeNoise();
 		
 		
 		

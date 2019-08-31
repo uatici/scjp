@@ -1,0 +1,75 @@
+IDENTIFIERS
+
+    * Identifiers can begin with a letter ,an underscore , or a currency chracter.
+    * After the first character, Identifiers can also include digits.
+    * Identifiers can be of any lenght.
+    * JavaBeans methods must be named using camelCase, and depending on the method's purpose, must start with set, get, is, add, or remove.
+
+DECLARATION RULES
+    * A source code file can have only one public class.
+    * If the source code file contains a public class the filename must match the public class name.
+    * A file can have only one package statement, but multiple imports.
+    * The package statement (if any) must be the first (non-comment) line in a source file.
+    * The import statements (if any) must come after the package and before the class declaration.
+    * If there is no package statement, import statement must be the first (non-comment) statements in the source file.
+    * Package and import statments apply to all classes in the file.
+    * A file can have more than nonpublic class.
+    * Files with no public classes have no naming restrictions.
+
+CLASS ACCESS MODIFIERS
+    * There are three access modifiers; public, protected, and private.
+    * There are four access levels; public ,prıtected, default,private.
+    * Classes can have only public or default access.
+    * A class with default access can be seen only by classes within the same package.
+    * A class with public access can be seen by all classes from all packages.
+    * Class visibility resolves around whether code in one class can
+        * Create an instance of another class.
+        * Extend (or subclass), another class.
+        * Access mothods and variables of another class.
+
+INTERFACE IMPLEMENTATION
+    * Interfaces are contracts for what a class can do, but they say notihg about the way in which the class must to do.
+    * Interfaces can be implemented by any class, from any inheritance three.
+    * An interface is like a 100 percent abstract class, and is implicitly abstarct whether you type the abstract modifier in the declaration or not.
+    * An instance can have only abstract methods, no concreate methods allowed.
+    * Interface methods are by default public and abstract explicit declaration of these modifiers is optional.
+    * Interfaces can have constants, which are always imlicitly public, static, and final.
+    * Interface constant declaration of public, static and final are optinal is any combination.
+    * A legal nonabstarct implementing class has the following properties:
+        * It provides concreate implemtations for the interface's methods.
+        * It must follow all legal override rules for the methods it imlements.
+        * It must not declare any new checked exceptions for an implementation method.
+        * It must not declare any checked exceptions that are broader than the exceptions declared in the interface method.
+        * It may declare runtime exceptions on any interface method implementation regardless of the interface declaration.
+        * It must maintain the exact signature (allowing for covariant returns) and return type of the methods it implements (but does not have to declare the exceptions of the interface).
+    * A class implementing an interface can itself be abstract.
+    * An abstarct implementing class does not have to implement the interface methods (but the first concrete subclass must)
+    * A class can extend only one class (no multiple inheritance), but it can implement many interfaces.
+    * Interface can extend one or more other interfaces.
+    * Interfaces cannot extend a class, or implement a class or interface.
+
+MEMBER ACCESS MODIFIERS
+    * Methods and instance (nonlocal) variables are known as "members".
+    * Members can use all four access levels:public,protected,default,private.
+    * Member access comes in two forms:
+        * Code in one class can access a member of another class.
+        * A subclass can inherit a member of its superclass.
+    * If a class cannot be accessed,its members cannot be accessed.
+    * Determine class visibility before determining member visibility.
+    * public members can be accessed by all other class, even in other package.
+    * If a super class member is public, the superclass inherits it--regardless of package.
+    * Members accessed without the dot operator (.) must belong to the same class.
+    * this. always refers to the currently executing object.
+    * this.aMethod() is the same as just invoking aMethod().
+    * private members can be accessed only by code in the sme class.
+    * private members are not visible to subclass, so private members can not be inherit.
+    * Default and protected members differ only subclass are involved:
+        * Default members can be accessed only by classes in the same package.
+        * protected members can be accesed by other classes in the same package, plus subclasses regardless of package.
+        * protected = package plus kids (subclasses).
+        * For subclasses outside the package, the protected member can be accessed only through inheritnce;
+            a subclass outside the package cannot access a protected member by using a reference to a superclass instance
+            (in the other words, inheritance is the only mechanism for a subclass outside the package to access a protected member of its superclass).
+        * A protected member inherited by subclass from another package is not accessible to any
+        other class in the subclass package, except for the subclass' own subclasses.
+
